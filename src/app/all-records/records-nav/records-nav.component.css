@@ -1,0 +1,32 @@
+button.tableFunc {
+  height: 5vh;
+  width: 5vw;
+  background-color: #b9b9b9;
+  border: none;
+  border-radius: 0.6rem;
+  color: #fff;
+  margin: 0 0.2rem;
+}
+
+button.tableFuncActive {
+  background-color: #ad9aff;
+  cursor: pointer;
+}
+
+button.tableFuncActive:hover {
+  background-color: #9982ff;
+}
+
+button.tableFuncActive:active {
+  background-color: #8164ff;
+}
+
+span.material-icons {
+  vertical-align: middle;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  button.tableFunc {
+    width: 40vw;
+  }
+}

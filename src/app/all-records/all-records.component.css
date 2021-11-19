@@ -1,0 +1,34 @@
+app-records-edit {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+}
+
+app-records-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0.5rem;
+}
+
+app-records-nav {
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 55vh;
+}
+
+/* Mobile */
+@media (min-width: 320px) and (max-width: 767px) {
+  app-records-edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

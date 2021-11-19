@@ -1,0 +1,66 @@
+/* By TagName */
+
+form {
+  height: 50vh;
+  width: 60vw;
+  border: 1px solid #8164ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 0.6rem;
+}
+
+input {
+  display: block;
+  width: 25vw;
+  height: 5vh;
+  border: 1px solid #8164ff;
+  border-radius: 0.6rem;
+}
+
+button {
+  width: 25vw;
+  height: 5vh;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 0.6rem;
+}
+
+/* By ClassName */
+
+.PrmBtn {
+  background-color: #ad9aff;
+}
+
+.PrmBtn:hover {
+  background-color: #9982ff;
+}
+
+.PrmBtn:active {
+  background-color: #8164ff;
+}
+
+.DsblBtn {
+  background-color: #b9b9b9;
+  cursor: auto;
+}
+
+/* By ID */
+
+/* Mobile */
+@media (min-width: 320px) and (max-width: 767px) {
+  input {
+    width: 60vw;
+  }
+
+  button {
+    width: 60vw;
+  }
+
+  form {
+    width: 80vw;
+  }
+}

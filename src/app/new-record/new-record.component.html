@@ -1,0 +1,36 @@
+<form (ngSubmit)="onSubmit(formData)" #formData="ngForm">
+  <div>
+    <label for="name">Your Name</label>
+    <input
+      #inputName
+      type="text"
+      id="name"
+      placeholder="Ex. Sam"
+      name="name"
+      (input)="checkName(inputName.value)"
+      ngModel
+      required
+    />
+  </div>
+
+  <div>
+    <label for="phone">Your Phone</label>
+    <input
+      #inputPhone
+      type="tel"
+      id="phone"
+      placeholder="Ex. 971234567"
+      name="phone"
+      (input)="checkPhone(inputPhone.value)"
+      ngModel
+      required
+    />
+  </div>
+  <button
+    type="submit"
+    [class]="inputValid ? 'PrmBtn' : 'DsblBtn'"
+    [disabled]="!inputValid"
+  >
+    Save
+  </button>
+</form>

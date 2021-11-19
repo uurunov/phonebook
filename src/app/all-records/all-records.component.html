@@ -1,0 +1,6 @@
+<app-popup *ngIf="modelOpen" (modelOff)="setPopUpState($event)"></app-popup>
+<section>
+  <app-records-edit (popUpEnable)="setPopUpState($event)"></app-records-edit>
+  <app-records-list [searchStarted]="searchStarted"></app-records-list>
+  <app-records-nav></app-records-nav>
+</section>

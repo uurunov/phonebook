@@ -1,0 +1,87 @@
+div.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+section.popUpBox {
+  position: fixed;
+  top: 28vh;
+  left: 20vw;
+  width: 60vw;
+  height: 40vh;
+  z-index: 20;
+  background: #fff;
+  border-radius: 0.6rem;
+}
+
+div.popUpDelete {
+  text-align: center;
+  margin: 5rem 0;
+}
+
+div.popUpDelete p {
+  font-weight: bold;
+}
+
+button {
+  width: 8vw;
+  height: 5vh;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #ad9aff;
+}
+
+button.someMargin {
+  margin: 5rem 0 0 1rem;
+}
+
+button:hover {
+  background-color: #9982ff;
+}
+
+button:active {
+  background-color: #8164ff;
+}
+
+form input {
+  width: 25vw;
+  height: 5vh;
+  border: 1px solid #8164ff;
+  border-radius: 0.6rem;
+}
+
+form {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid black;
+}
+
+form div.form-actions button {
+  margin-left: 1rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  section.popUpBox {
+    top: 28vh;
+    left: 10vw;
+    width: 80vw;
+  }
+
+  div.popUpDelete p {
+    font-size: 0.9rem;
+  }
+
+  button {
+    width: 20vw;
+  }
+}

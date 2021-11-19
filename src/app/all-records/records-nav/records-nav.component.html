@@ -1,0 +1,28 @@
+<!-- <button
+  type="button"
+  class="tableFunc"
+  [class.tableFuncActive]="numOfRecords > limOfRecords"
+  [disabled]="!(numOfRecords > limOfRecords)"
+>
+  <span class="material-icons"> navigate_before </span>
+</button> -->
+
+<button
+  type="button"
+  class="tableFunc"
+  [class.tableFuncActive]="searchStarted"
+  [disabled]="!searchStarted"
+  (click)="onBackClicked()"
+  *ngIf="searchStarted"
+>
+  Back
+</button>
+
+<!-- <button
+  type="button"
+  class="tableFunc"
+  [class.tableFuncActive]="numOfRecords > limOfRecords"
+  [disabled]="!(numOfRecords > limOfRecords)"
+>
+  <span class="material-icons"> navigate_next </span>
+</button> -->

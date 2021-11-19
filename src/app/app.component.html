@@ -1,0 +1,28 @@
+<header id="head">
+  <div class="heading">
+    <h1 class="logo uppercase">{{ title }}</h1>
+    <h3 class="caption">Application</h3>
+  </div>
+
+  <nav class="uppercase">
+    <a routerLink="new" routerLinkActive="active">Add Record</a>
+    <a
+      routerLink=""
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Home</a
+    >
+    <a routerLink="all" routerLinkActive="active">View Records</a>
+  </nav>
+</header>
+
+<main id="content">
+  <router-outlet></router-outlet>
+</main>
+
+<footer id="footer">
+  <p>
+    <span class="material-icons"> copyright </span>
+  </p>
+  <p>2021 All Rights Reserved by <span id="author">Ulugbek Urunov</span></p>
+</footer>

@@ -1,0 +1,42 @@
+<form (ngSubmit)="onSearch(data)" #data="ngForm">
+  <input
+    #inputValue
+    type="search"
+    name="cname"
+    id="searchByName"
+    placeholder="Enter name"
+    [disabled]="!numOfRecords"
+    [class.active]="numOfRecords"
+    (input)="onTyping(inputValue.value)"
+    ngModel
+    required
+  />
+  <button
+    type="submit"
+    class="search"
+    [disabled]="!valOfInput"
+    [class.searchActive]="valOfInput"
+  >
+    <span class="material-icons"> search </span>
+  </button>
+</form>
+<div>
+  <button
+    type="button"
+    class="modify"
+    [class.modifyActive]="numOfCheckedRecords === 1"
+    [disabled]="!(numOfCheckedRecords === 1)"
+    (click)="onEdit()"
+  >
+    <span class="material-icons"> edit </span>
+  </button>
+  <button
+    type="reset"
+    class="modify"
+    [class.modifyActive]="numOfCheckedRecords"
+    [disabled]="!numOfCheckedRecords"
+    (click)="onDelete()"
+  >
+    <span class="material-icons"> delete </span>
+  </button>
+</div>

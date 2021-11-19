@@ -1,0 +1,77 @@
+input {
+  border: 1px solid #b9b9b9;
+  border-radius: 0.6rem 0 0 0.6rem;
+  width: 25vw;
+  height: 5vh;
+}
+
+input.active {
+  border-color: #8164ff;
+}
+
+input::placeholder {
+  color: #b9b9b9;
+}
+
+input.active::placeholder {
+  color: #8164ff;
+}
+
+button.modify {
+  height: 5vh;
+  width: 5vw;
+  border: none;
+  color: #fff;
+  border-radius: 0.6rem;
+  margin: 0 0.2rem;
+  background-color: #b9b9b9;
+}
+
+button.search {
+  width: 5vw;
+  height: auto;
+  border: none;
+  border-radius: 0 0.6rem 0.6rem 0;
+  background-color: #b9b9b9;
+  color: #fff;
+}
+
+button.searchActive:hover,
+button.modifyActive:hover {
+  background-color: #9982ff;
+}
+button.searchActive:active,
+button.modifyActive:active {
+  background-color: #8164ff;
+}
+
+button.modifyActive,
+button.searchActive {
+  background-color: #ad9aff;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+}
+
+span.material-icons {
+  vertical-align: middle;
+}
+
+/* Mobile */
+@media (min-width: 320px) and (max-width: 767px) {
+  input {
+    width: 70vw;
+  }
+
+  button.search {
+    width: 15vw;
+  }
+
+  button.modify {
+    width: 40vw;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}

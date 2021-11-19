@@ -1,0 +1,54 @@
+<section *ngIf="records.length" [class.scroll]="numOfRecords > 6">
+  <h4>{{ title }}</h4>
+  <table class="border">
+    <thead>
+      <th>#</th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>
+        <button
+          type="button"
+          [disabled]="searchStarted"
+          [class.btn-icon]="!searchStarted"
+          [class.DsblBtn]="searchStarted"
+          (click)="onClickAll()"
+          *ngIf="!searchStarted"
+        >
+          <span class="material-icons icon">
+            {{ checkAll ? " check_box " : " check_box_outline_blank " }}
+          </span>
+        </button>
+      </th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of records; index as i">
+        <td>{{ record.id }}</td>
+        <td>{{ record.name }}</td>
+        <td>+998{{ record.phone }}</td>
+        <td>
+          <button type="button" class="btn-icon" (click)="onClickOne($event)">
+            <span class="material-icons">
+              {{ record.state ? " check_box " : " check_box_outline_blank " }}
+            </span>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section *ngIf="!records.length">
+  <table class="border">
+    <thead>
+      <th>#</th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>
+        <button type="button" class="DsblBtn" disabled>
+          <span class="material-icons"> check_box_outline_blank </span>
+        </button>
+      </th>
+    </thead>
+  </table>
+  <h2>{{ message }}</h2>
+</section>

@@ -1,0 +1,106 @@
+/* By Tag Name */
+
+nav {
+  display: flex;
+  background-color: #ad9aff;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+a {
+  text-decoration: none;
+  flex-grow: 1;
+  padding: 1.5vh 0;
+  color: #fff;
+}
+
+a:hover {
+  background-color: #9982ff;
+}
+
+a:active {
+  background-color: #8164ff;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5e5e5;
+}
+
+footer p {
+  margin: 0 0.2rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* By Classes */
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.logo {
+  background-color: #7f7f7f;
+  font-size: 3rem;
+  padding: 0 1rem;
+}
+
+.caption {
+  background-color: #bfbfbf;
+}
+
+.heading {
+  align-self: center;
+  color: #fff;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.active,
+.active:hover {
+  background-color: #8164ff;
+}
+
+/* By ID */
+
+#author {
+  letter-spacing: 0.08rem;
+  font-weight: 500;
+}
+
+span.material-icons {
+  vertical-align: middle;
+}
+
+/* Viewport */
+
+/* Mobile */
+@media (min-width: 320px) and (max-width: 767px) {
+  .logo {
+    font-size: 2rem;
+  }
+
+  nav {
+    font-size: 0.8rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+
+  footer p span.material-icons {
+    font-size: 1.2rem;
+  }
+}

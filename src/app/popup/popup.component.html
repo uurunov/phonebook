@@ -1,0 +1,40 @@
+<div class="backdrop" (click)="onCancel()"></div>
+
+<section class="popUpBox">
+  <!-- Delete Button -->
+
+  <div class="popUpDelete" *ngIf="editOrDelete === 'delete'">
+    <p>Are you sure you want to delete selected record(s)?</p>
+    <button #buttonVal1 class="someMargin" (click)="onCancel()">NO</button>
+    <button #buttonVal2 class="someMargin" (click)="onDelete()">YES</button>
+  </div>
+
+  <!-- Edit Button -->
+
+  <form
+    (ngSubmit)="onSubmit(formData)"
+    #formData="ngForm"
+    *ngIf="editOrDelete === 'edit'"
+  >
+    <input
+      type="text"
+      id="name"
+      [placeholder]="newRecord[0].name"
+      name="name"
+      ngModel
+      required
+    />
+    <input
+      type="tel"
+      id="phone"
+      [placeholder]="newRecord[0].phone"
+      name="phone"
+      ngModel
+      required
+    />
+    <div class="form-actions">
+      <button type="button" (click)="onCancel()">Cancel</button>
+      <button type="submit">Save</button>
+    </div>
+  </form>
+</section>
